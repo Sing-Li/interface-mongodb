@@ -24,4 +24,5 @@ class MongoDBPeer(RelationBase):
         convos = self.conversations()
 
         for conv in convos:
-            yield (conv.scope.replace('/', '-'), conv.get_remote('private-address'))
+            yield (conv.scope.replace('/', '-'),
+                   conv.get_remote('private-address'))
